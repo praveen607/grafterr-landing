@@ -1,0 +1,439 @@
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0.875rem 2rem;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn--primary:hover {
+  background: var(--gradient-btn-hover);
+  transform: translateY(-2px);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary-blue);
+  border: 2px solid var(--color-primary-blue);
+}
+
+.btn--outline:hover {
+  background: var(--color-primary-blue);
+  color: var(--color-white);
+}
+
+.btn--nav {
+  padding: 0.625rem 1.5rem;
+  font-size: var(--fs-body-sm);
+  border-radius: var(--radius-sm);
+}
+
+.btn--retry {
+  background: var(--color-error);
+  color: var(--color-white);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+}
+
+.btn--retry:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.product-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2xl);
+  transition: transform var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-accent, var(--gradient-primary));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.product-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  position: relative;
+}
+
+.product-card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.product-card__image-wrapper {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  background: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__name {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.product-card__description {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+.product-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.product-card__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-secondary);
+}
+
+.product-card__feature-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   CAROUSEL
+   ============================================ */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform var(--transition-base);
+  will-change: transform;
+}
+
+.carousel__slide {
+  flex-shrink: 0;
+  padding: 0 var(--space-md);
+}
+
+.carousel__slide--desktop {
+  width: calc(100% / 3);
+}
+
+.carousel__slide--tablet {
+  width: 50%;
+}
+
+.carousel__slide--mobile {
+  width: 100%;
+}
+
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.carousel__arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  color: var(--color-text-primary);
+}
+
+.carousel__arrow:hover:not(:disabled) {
+  border-color: var(--color-primary-blue);
+  color: var(--color-primary-blue);
+}
+
+.carousel__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.carousel__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.carousel__dots {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-border);
+  transition: all var(--transition-base);
+  padding: 0;
+}
+
+.carousel__dot--active {
+  background: var(--color-primary-blue);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   SKELETON LOADING
+   ============================================ */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-skeleton-base) 25%,
+    var(--color-skeleton-shine) 50%,
+    var(--color-skeleton-base) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton--text {
+  height: 1em;
+  margin-bottom: var(--space-sm);
+}
+
+.skeleton--text-lg {
+  height: 1.5em;
+  margin-bottom: var(--space-md);
+}
+
+.skeleton--heading {
+  height: 3rem;
+  width: 70%;
+  margin-bottom: var(--space-md);
+}
+
+.skeleton--heading-sm {
+  height: 2rem;
+  width: 50%;
+  margin-bottom: var(--space-md);
+}
+
+.skeleton--paragraph {
+  height: 1em;
+  width: 100%;
+  margin-bottom: var(--space-sm);
+}
+
+.skeleton--paragraph:last-child {
+  width: 80%;
+}
+
+.skeleton--button {
+  height: 48px;
+  width: 180px;
+  border-radius: var(--radius-md);
+}
+
+.skeleton--card {
+  height: 380px;
+  border-radius: var(--radius-lg);
+}
+
+.skeleton--image {
+  height: 180px;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.skeleton--circle {
+  border-radius: var(--radius-full);
+}
+
+.skeleton--nav-link {
+  height: 1rem;
+  width: 60px;
+}
+
+/* ============================================
+   ERROR STATE
+   ============================================ */
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4xl) var(--space-xl);
+  text-align: center;
+}
+
+.error-state__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--color-error-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+.error-state__icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--color-error);
+}
+
+.error-state__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.error-state__message {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 400px;
+}
+
+/* ============================================
+   FADE IN ANIMATION
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in--delay-1 { animation-delay: 0.1s; }
+.fade-in--delay-2 { animation-delay: 0.2s; }
+.fade-in--delay-3 { animation-delay: 0.3s; }
+.fade-in--delay-4 { animation-delay: 0.4s; }
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  margin: var(--space-lg) auto;
+}

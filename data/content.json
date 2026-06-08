@@ -1,0 +1,124 @@
+{
+  "navigation": {
+    "logo": {
+      "src": "assets/images/logo.svg",
+      "alt": "Grafterr Logo"
+    },
+    "links": [
+      {
+        "text": "Products",
+        "href": "#products",
+        "hasDropdown": true
+      },
+      {
+        "text": "Solutions",
+        "href": "#solutions",
+        "hasDropdown": true
+      },
+      {
+        "text": "Pricing",
+        "href": "#pricing",
+        "hasDropdown": false
+      },
+      {
+        "text": "Resources",
+        "href": "#resources",
+        "hasDropdown": true
+      }
+    ],
+    "cta": {
+      "text": "Get Started",
+      "href": "#get-started"
+    }
+  },
+  "hero": {
+    "headlinePrefix": "The ultimate restaurant",
+    "headlineGradient": "technology provider",
+    "subheadline": "Streamline your restaurant operations with our all-in-one platform. From point of sale to kitchen management, we have everything you need to succeed.",
+    "cta": {
+      "text": "Get Started Free",
+      "href": "#get-started"
+    },
+    "decorativeShapes": [
+      {
+        "type": "circle",
+        "color": "#14B8A6",
+        "size": 280,
+        "position": {
+          "top": "10%",
+          "right": "-5%"
+        }
+      },
+      {
+        "type": "rectangle",
+        "color": "#F97316",
+        "width": 200,
+        "height": 140,
+        "position": {
+          "bottom": "15%",
+          "left": "-3%"
+        },
+        "rotation": 12
+      }
+    ]
+  },
+  "featuresSection": {
+    "title": "Everything you need to",
+    "titleAccent": "grow your business",
+    "subtitle": "Our comprehensive suite of tools helps restaurants increase efficiency, reduce costs, and deliver exceptional dining experiences.",
+    "products": [
+      {
+        "id": "pos",
+        "name": "Point of Sale",
+        "description": "Fast, intuitive POS system designed specifically for restaurants. Process orders quickly, manage tables effortlessly, and keep your service running smoothly during peak hours.",
+        "image": "assets/images/pos-system.svg",
+        "icon": "pos-icon",
+        "features": [
+          "Table management",
+          "Split billing",
+          "Real-time reporting",
+          "Staff management"
+        ],
+        "accentColor": "#3B82F6"
+      },
+      {
+        "id": "self-service",
+        "name": "Self-service",
+        "description": "Empower your customers with self-ordering kiosks and QR code menus. Reduce wait times, minimize errors, and increase average order value with smart upselling prompts.",
+        "image": "assets/images/self-service.svg",
+        "icon": "self-service-icon",
+        "features": [
+          "QR code ordering",
+          "Kiosk integration",
+          "Smart upselling",
+          "Contactless payment"
+        ],
+        "accentColor": "#14B8A6"
+      },
+      {
+        "id": "kitchen",
+        "name": "Kitchen Management",
+        "description": "Streamline kitchen operations with our digital kitchen display system. Manage orders efficiently, track preparation times, and ensure every dish is served perfectly and on time.",
+        "image": "assets/images/kitchen-mgmt.svg",
+        "icon": "kitchen-icon",
+        "features": [
+          "Digital order display",
+          "Prep time tracking",
+          "Recipe management",
+          "Inventory alerts"
+        ],
+        "accentColor": "#F97316"
+      }
+    ],
+    "carousel": {
+      "itemsPerView": {
+        "mobile": 1,
+        "tablet": 2,
+        "desktop": 3
+      },
+      "showArrows": true,
+      "autoplay": false,
+      "transitionDuration": 300
+    }
+  }
+}
